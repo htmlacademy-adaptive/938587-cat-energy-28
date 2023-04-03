@@ -45,8 +45,9 @@
     <main class="main-catalog">
       <h1 class="visually-hidden">Каталог продукции и дополнительные товары</h1>
       <section class="catalog">
-        <h2 class="catalog__title">Каталог продукции</h2>
-        <ul class="catalog__list">
+        <div class="catalog--wrapper">
+          <h2 class="catalog__title">Каталог продукции</h2>
+          <ul class="catalog__list">
 
           <li class="catalog__item">
             <img class="catalog__item-img" src="#" alt="#">
@@ -211,7 +212,46 @@
             <button class="catalog__button button button--more" href="#">Показать все</button>
           </li>
 
-        </ul>
+          </ul>
+        </div>
+      </section>
+
+      <section class="catalog-extra">
+        <div class="catalog-extra--wrapper">
+          <h2 class="catalog-extra__title">Дополнительные товары</h2>
+          <ul class="catalog-extra__list">
+            <li class="catalog-extra__item">
+              <h3 class="catalog-extra__name">Сахарозаменитель</h3>
+              <p class="catalog-extra__description">1 упаковка (100 г)</p>
+              <p class="catalog-extra__price">200 ₽</p>
+              <button class="catalog-extra__button button" href="#">заказать</button>
+            </li>
+            <li class="catalog-extra__item">
+              <h3 class="catalog-extra__name">Питьевая вода</h3>
+              <p class="catalog-extra__description">5 литров</p>
+              <p class="catalog-extra__price">50 ₽</p>
+              <button class="catalog-extra__button button" href="#">заказать</button>
+            </li>
+            <li class="catalog-extra__item">
+              <h3 class="catalog-extra__name">Молоко</h3>
+              <p class="catalog-extra__description">1 литр</p>
+              <p class="catalog-extra__price">100 ₽</p>
+              <button class="catalog-extra__button button" href="#">заказать</button>
+            </li>
+            <li class="catalog-extra__item">
+              <h3 class="catalog-extra__name">Витамины</h3>
+              <p class="catalog-extra__description">1 упаковка (30 г)</p>
+              <p class="catalog-extra__price">300 ₽</p>
+              <button class="catalog-extra__button button" href="#">заказать</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="present">
+        <div class="present__wrapper">
+          <h2 class="present__title">Закажите все и получите чехол для кота в подарок!</h2>
+        </div>
       </section>
 
       <section class="contacts">
