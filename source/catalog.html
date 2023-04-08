@@ -2,12 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
 
     <header class="main-header">
-      <div class="wrapper">
+      <div class="wrapper main-header--wrapper">
         <a class="main-header__logo" href="index.html">
           <img
             src="img/logo-mobile.svg"
@@ -203,7 +204,7 @@
           </li>
 
           <li class="catalog__item catalog__item---more">
-            <h3 class="catalog__item-title title">Показать еще 100500 товаров</h3>
+            <h3 class="catalog__item-title title catalog__item-title--mode">Показать еще 100500 товаров</h3>
             <p class="catalog__item-description description">На самом деле вкусов гораздо больше!</p>
             <button class="catalog__button button button--more">Показать все</button>
           </li>
@@ -213,7 +214,7 @@
       </section>
 
       <section class="catalog-extra">
-        <div class="catalog-extra--wrapper">
+        <div class="wrapper catalog-extra--wrapper">
           <h2 class="catalog-extra__title title">Дополнительные товары</h2>
           <ul class="catalog-extra__list">
             <li class="catalog-extra__item">
@@ -246,7 +247,7 @@
 
       <section class="present">
         <div class="wrapper">
-          <h2 class="present__title">Закажите все и получите чехол для кота в подарок!</h2>
+          <h2 class="present__title present--wrapper">Закажите все и получите чехол для кота в подарок!</h2>
         </div>
       </section>
 
@@ -259,14 +260,16 @@
       </section>
 
       <section class="map">
-        <h2 class="visually-hidden">Карта</h2>
-          <img
-            class="map__img"
-            width="320"
-            height="362"
-            src="img/map-mobile.png"
-            alt="Карта с адресом"
+        <div class="wrapper">
+          <h2 class="visually-hidden">Карта</h2>
+            <img
+              class="map__img"
+              width="320"
+              height="362"
+              src="img/map-mobile.png"
+              alt="Карта с адресом"
             />
+          </div>
       </section>
     </main>
 

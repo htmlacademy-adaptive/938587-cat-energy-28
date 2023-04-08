@@ -2,12 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
 
     <header class="main-header">
-      <div class="wrapper">
+      <div class="wrapper main-header--wrapper">
         <a class="main-header__logo" href="index.html">
           <img
             src="img/logo-mobile.svg"
@@ -117,28 +118,28 @@
                     <label class="form-selection__label">
                       <input class="form-selection__checkbox-input visually-hidden" type="checkbox" name="sugar-substitute" checked>
                       <span class="form-selection__checkbox-mark"></span>
-                      <span class="form-selection__item-text">Сахарозаменитель</span>
+                      <span class="form-selection__item-text form-selection__item-text--mode">Сахарозаменитель</span>
                     </label>
                   </li>
                   <li class="form-selection__checkbox">
                     <label class="form-selection__label">
                       <input class="form-selection__checkbox-input visually-hidden" type="checkbox" name="water">
                       <span class="form-selection__checkbox-mark"></span>
-                      <span class="form-selection__item-text">Питьевая вода</span>
+                      <span class="form-selection__item-text form-selection__item-text--mode">Питьевая вода</span>
                     </label>
                   </li>
                   <li class="form-selection__checkbox">
                     <label class="form-selection__label">
                       <input class="form-selection__checkbox-input visually-hidden" type="checkbox" name="milk">
                       <span class="form-selection__checkbox-mark"></span>
-                      <span class="form-selection__item-text">Молоко</span>
+                      <span class="form-selection__item-text form-selection__item-text--mode">Молоко</span>
                     </label>
                   </li>
                   <li class="form-selection__checkbox-item">
                     <label class="form-selection__label">
                       <input class="form-selection__checkbox-input visually-hidden" type="checkbox" name="vitamins">
                       <span class="form-selection__checkbox-mark"></span>
-                      <span class="form-selection__item-text">Витамины</span>
+                      <span class="form-selection__item-text form-selection__item-text--mode">Витамины</span>
                     </label>
                   </li>
                 </ul>
@@ -157,14 +158,16 @@
       </section>
 
       <section class="map">
-        <h2 class="visually-hidden">Карта</h2>
-          <img
-            class="map__img"
-            width="320"
-            height="362"
-            src="img/map-mobile.png"
-            alt="Карта с адресом"
+        <div class="wrapper">
+          <h2 class="visually-hidden">Карта</h2>
+            <img
+              class="map__img"
+              width="320"
+              height="362"
+              src="img/map-mobile.png"
+              alt="Карта с адресом"
             />
+          </div>
       </section>
     </main>
 
