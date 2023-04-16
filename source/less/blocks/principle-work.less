@@ -1,3 +1,29 @@
+.principle-work .title--main {
+  margin-bottom: 40px;
+}
+
 .principle-work__list {
   .zeroing-the-list();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 37px 153px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 37px 94px;
+  }
 }
+
+.principle-work__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: auto;
+  }
+}
+

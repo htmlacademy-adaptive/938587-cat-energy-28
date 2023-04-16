@@ -1,17 +1,24 @@
 .select-program {
   position: relative;
-  min-height: 480px;
   padding: 27px 20px 0;
   background: url("../img/select-background.jpg") no-repeat;
   background-size: 320px 302px;
   background-position: top center;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
 }
 
 .select-program__title {
   font-size: 36px;
   line-height: 36px;
-  color: #ffffff;
+  color: @basic-white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-black;
+  }
 }
 
 .select-program--wrapper {
@@ -27,6 +34,26 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: @basic-white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-black;
+  }
+}
+
+.select-program__button {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    width: 192px;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+    box-sizing: content-box;
+  }
 }
