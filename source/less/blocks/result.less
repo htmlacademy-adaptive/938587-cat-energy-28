@@ -25,6 +25,12 @@
     grid-template-rows: 1fr;
     gap: 20px 32px;
   }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 .result__total {
@@ -42,10 +48,24 @@
     margin-left: auto;
     margin-top: 15px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 .result__total-number {
   text-align: right;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 360px;
+  }
 }
 
 .result__number-title {
@@ -63,4 +83,10 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
+}
+
+.result .wrapper--wide {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }

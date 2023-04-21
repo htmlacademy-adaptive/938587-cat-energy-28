@@ -20,6 +20,10 @@
 .catalog-extra__button {
   display: block;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    max-width: 244px;
+  }
 }
 
 .catalog-extra__item {
@@ -29,5 +33,60 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.catalog-extra__present--wrapper {
+  background-image: url("../img/present.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: 20%;
+  }
+}
+
+.catalog-extra__present-title {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: @basic-white;
+  padding-top: 187px;
+  padding-bottom: 43px;
+  margin-left: 56px;
+  width: 161px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    margin-left: 422px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 185px;
+    padding-bottom: 42px;
+    margin-left: 41px;
+  }
+}
+
+.catalog-extra_main-part {
+  @media (min-width: @desktop-width) {
+    width: 70%;
+  }
+}
+
+.catalog-extra--wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
