@@ -50,51 +50,51 @@
         <section class="form">
           <h2 class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
           <form class="form-selection" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="form-group--wrapper">
+                <fieldset class="form-selection__group">
+                  <legend class="visually-hidden">Основные данные</legend>
+                  <label class="form-selection__label">
+                    <span class="form-selection__text">Имя:*</span>
+                    <input class="form-selection__input" type="text" name="name" placeholder="Барсик" required>
+                  </label>
+                  <label class="form-selection__label">
+                      <span class="form-selection__text">Вес (кг):*</span>
+                      <input class="form-selection__input" type="text" name="weight" placeholder="7" required>
+                  </label>
+                  <label class="form-selection__label">
+                    <span class="form-selection__text">Возраст (лет):</span>
+                    <input class="form-selection__input" type="text" name="age" placeholder="7">
+                  </label>
+                </fieldset>
 
-            <fieldset class="form-selection__group">
-              <legend class="visually-hidden">Основные данные</legend>
-              <label class="form-selection__label">
-                <span class="form-selection__text">Имя:*</span>
-                <input class="form-selection__input" type="text" name="name" placeholder="Барсик" required>
-              </label>
-              <label class="form-selection__label">
-                  <span class="form-selection__text">Вес (кг):*</span>
-                  <input class="form-selection__input" type="text" name="weight" placeholder="7" required>
-              </label>
-              <label class="form-selection__label">
-                <span class="form-selection__text">Возраст (лет):</span>
-                <input class="form-selection__input" type="text" name="age" placeholder="7">
-              </label>
-              </fieldset>
-
-              <fieldset class="form-selection__group form-selection__group--other">
-                <legend class="visually-hidden">Цель программы</legend>
-                <ul class="form-selection__list">
-                  <li class="form-selection__radio">
-                    <label class="form-selection__label">
-                      <input class="form-selection__radio-input visually-hidden" type="radio" name="program" value="weight-loss" checked>
-                      <span class="form-selection__radio-mark"></span>
-                      <span class="form-selection__text form-selection__text-mod">Похудение</span>
-                    </label>
-                  </li>
-                  <li class="form-selection__radio">
-                    <label class="form-selection__label">
-                      <input class="form-selection__radio-input visually-hidden" type="radio" name="program" value="weight-gain">
-                      <span class="form-selection__radio-mark"></span>
-                      <span class="form-selection__text form-selection__text-mod">Набор массы</span>
-                    </label>
-                  </li>
-                  <li class="form-selection__radio">
-                    <label class="form-selection__label">
-                      <input class="form-selection__radio-input visually-hidden" type="radio" name="program" value="your-answer">
-                      <span class="form-selection__radio-mark"></span>
-                      <span class="form-selection__text form-selection__text-mod">Не знаю (Нужен ваш совет)</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-
-              <fieldset class="form-selection__group">
+                <fieldset class="form-selection__group form-selection__group--other">
+                  <legend class="visually-hidden">Цель программы</legend>
+                  <ul class="form-selection__list">
+                    <li class="form-selection__radio">
+                      <label class="form-selection__label">
+                        <input class="form-selection__radio-input visually-hidden" type="radio" name="program" value="weight-loss" checked>
+                        <span class="form-selection__radio-mark"></span>
+                        <span class="form-selection__text form-selection__text-mod">Похудение</span>
+                      </label>
+                    </li>
+                    <li class="form-selection__radio">
+                      <label class="form-selection__label">
+                        <input class="form-selection__radio-input visually-hidden" type="radio" name="program" value="weight-gain">
+                        <span class="form-selection__radio-mark"></span>
+                        <span class="form-selection__text form-selection__text-mod">Набор массы</span>
+                      </label>
+                    </li>
+                    <li class="form-selection__radio">
+                      <label class="form-selection__label">
+                        <input class="form-selection__radio-input visually-hidden" type="radio" name="program" value="your-answer">
+                        <span class="form-selection__radio-mark"></span>
+                        <span class="form-selection__text form-selection__text-mod">Не знаю (Нужен ваш совет)</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <fieldset class="form-selection__group form-selection__group--contacts">
                 <legend class="form-selection__group-title title">Контактные данные (владельца кота)</legend>
                 <label class="form-selection__label">
                   <span class="form-selection__text">e-mail:*</span>
@@ -152,11 +152,10 @@
         </section>
       </div>
       <section class="contacts">
-        <div class="wrapper--wide contacts--wrapper">
+        <div class="wrapper contacts--wrapper">
           <h2 class="visually-hidden">Контакты: адрес</h2>
-          <p class="contacts__partnership-title title">Приглашаем к сотрудничеству дилеров!
-            <address class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-          </p>
+          <p class="contacts__partnership-title title">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
       </section>
 
