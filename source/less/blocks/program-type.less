@@ -5,13 +5,27 @@
 
 .program-type__list {
   .zeroing-the-list();
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
 }
 
 .program-type__item {
   background-color: #f2f2f2;
 
-  &:first-child {
-    margin-bottom: 20px;
+  @media (min-width: @desktop-width) {
+    width: 570px;
   }
 }
 
@@ -23,6 +37,6 @@
 
 .program-type__button {
   background-color: transparent;
-  color: #000000;
+  color: @basic-black;
   line-height: 16px;
 }

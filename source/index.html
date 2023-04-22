@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
@@ -25,7 +26,7 @@
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span>Меню</span>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
@@ -45,9 +46,10 @@
     <main class="main-container">
       <h1 class="visually-hidden">Кэт энерджи - подбор правильного питания для котов</h1>
       <section class="select-program">
-        <div class="wrapper select-program-wrapper">
+        <div class="wrapper select-program-wrapper select-program-wrapper-mod">
           <h2 class="select-program__title title">Функциональное питание для котов</h2>
           <p class="select-program__slogan title">Занялся собой? Займись котом!</p>
+          <img src="img/index-can-mobile.svg" alt="Cat Energy PRO 500 г">
           <a class="select-program__button button" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -72,7 +74,7 @@
 
       <section class="principle-work">
         <div class="wrapper">
-          <h2 class="principle-work__title title">Как это работает</h2>
+          <h2 class="title title--main">Как это работает</h2>
           <ul class="principle-work__list">
             <li class="principle-work__item principle-work__item--block-one">
               <p class="description">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -92,19 +94,21 @@
 
       <section class="result">
         <div class="wrapper--wide">
-          <h2 class="result__title title">Живой пример</h2>
-          <p class="result__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="result__numbers">
-            <div class="result__number">
-              <p class="result__number-title">5 КГ</p>
-              <span class="result__number-description">снижение веса</span>
-            </div>
-            <div class="result__number">
-              <p class="result__number-title">60 дней</p>
-              <span class="result__number-description">затрачено времени</span>
+          <div>
+            <h2 class="title title--main">Живой пример</h2>
+            <p class="result__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="result__numbers">
+              <div class="result__number">
+                <p class="result__number-title">5 КГ</p>
+                <span class="result__number-description">снижение веса</span>
+              </div>
+              <div class="result__number">
+                <p class="result__number-title">60 дней</p>
+                <span class="result__number-description">затрачено времени</span>
+              </div>
+              <p class="result__total title">Затраты на питание: <span class="result__total-number">15 000 РУБ.</span></p>
             </div>
           </div>
-          <p class="result__total title">Затраты на питание: <span class="result__total-number">15 000</span> РУБ.</p>
           <div class="result__slider">
             <button class="result__slider-button button" type="button"></button>
             <img
@@ -126,7 +130,7 @@
       </section>
 
       <section class="contacts">
-        <div class="wrapper">
+        <div class="wrapper contacts--wrapper">
           <h2 class="visually-hidden">Контакты: адрес</h2>
           <p class="contacts__partnership-title title">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
@@ -134,21 +138,19 @@
       </section>
 
       <section class="map">
-        <div class="wrapper">
-          <h2 class="visually-hidden">Карта</h2>
-            <img
-              class="map__img"
-              width="320"
-              height="362"
-              src="img/map-mobile.png"
-              alt="Карта с адресом"
-            />
-          </div>
+        <h2 class="visually-hidden">Карта</h2>
+          <img
+            class="map__img"
+            width="320"
+            height="362"
+            src="img/map-mobile.png"
+            alt="Карта с адресом"
+          />
       </section>
     </main>
 
     <footer class="main-footer">
-      <div class="wrapper--wide">
+      <div class="wrapper--wide main-footer--mod">
         <a class="main-footer__logo">
           <img
             src="img/logo-title-mobile.svg"

@@ -2,3 +2,44 @@
   font-size: 36px;
   line-height: 36px;
 }
+
+.form-selection__label {
+  display: flex;
+}
+
+.form-selection__button {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+  }
+}
+
+.form-selection__list--checkbox {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+  }
+}
+
+.form-selection__checkbox {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
+
+.form-selection__group--contacts {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form-group--wrapper {
+  display: flex;
+  justify-content: space-between;
+}

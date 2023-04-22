@@ -1,11 +1,71 @@
 .result {
   background-color: #eaeaea;
   margin-top: 50px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+  }
 }
 
-.result__title {
-  font-size: 36px;
-  line-height: 40px;
+.result .title--main {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.result__numbers {
+  @media (min-width: @mobile-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 32px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 1fr;
+    gap: 20px 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.result__total {
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.result__total-number {
+  text-align: right;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 360px;
+  }
 }
 
 .result__number-title {
@@ -14,7 +74,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  color: #000000;
+  color: @basic-black;
 }
 
 .result__number-description {
@@ -25,8 +85,8 @@
   line-height: 100%;
 }
 
-.result__total {
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
+.result .wrapper--wide {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
