@@ -1,4 +1,10 @@
+.main-nav {
+  position: relative;
+}
+
 .main-nav__list {
+  display: block;
+  margin: 0 auto;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -6,8 +12,96 @@
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-style: normal;
+  min-width: 280px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+  min-width: 100vw;
+  height: 200px;
+  top: 35px;
+  right: 0;
+  z-index: 10;
+  max-height: 200px;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    min-width: auto;
+    height: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+}
+
+.main-nav__item {
+  color: @basic-black;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 24px;
 }
 
 .main-nav__item a {
   color: @basic-black;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -5px;
+  left: 65px;
+  z-index: 2;
+  width: 24px;
+  height: 16px;
+  background-color: @basic-white;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: @basic-black;
+  box-shadow: 0 6.5px 0 0 @basic-black, 0 13px 0 0 @basic-black;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  left: -25px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: @basic-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
