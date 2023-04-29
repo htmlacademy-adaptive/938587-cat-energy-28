@@ -23,6 +23,10 @@
     padding: 0;
     width: 440px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 478px;
+  }
 }
 
 .main-nav--opened .main-nav__wrapper {
@@ -52,10 +56,21 @@
     padding-top: 18px;
     padding-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .main-nav__item a {
   color: @basic-black;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+    background-color: rgba(104, 183, 56, 0.85); //Удалить это свойство
+  }
 }
 
 .main-nav__toggle {
