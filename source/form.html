@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
 
-    <header class="main-header">
+    <header class="main-header main-nav--nojs">
       <div class="wrapper main-header--wrapper">
         <a class="main-header__logo" href="index.html">
           <img
@@ -18,33 +18,35 @@
             alt="Логотип Кэт энерджи"
           />
           <img
+            class="main-header__logo--mod-nojs"
             src="img/logo-title-mobile.svg"
             width="101"
             height="18"
             alt="CAT ENERGY"
           />
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+        <nav class="main-nav main-nav--closed">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--current">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        <button class="main-nav__toggle" type="button">
+        </button>
         </nav>
       </div>
     </header>
 
     <main class="main-form">
-      <div class="wrapper">
+      <div class="wrapper wrapper--form">
         <h1 class="title title--main">Подбор программы</h1>
         <section class="form">
           <h2 class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
@@ -52,15 +54,15 @@
               <div class="form-group--wrapper">
                 <fieldset class="form-selection__group">
                   <legend class="visually-hidden">Основные данные</legend>
-                  <label class="form-selection__label">
+                  <label class="form-selection__label form-selection__label--basic-information">
                     <span class="form-selection__text">Имя:*</span>
                     <input class="form-selection__input" type="text" name="name" placeholder="Барсик" required>
                   </label>
-                  <label class="form-selection__label">
+                  <label class="form-selection__label form-selection__label--basic-information">
                       <span class="form-selection__text">Вес (кг):*</span>
                       <input class="form-selection__input" type="text" name="weight" placeholder="7" required>
                   </label>
-                  <label class="form-selection__label">
+                  <label class="form-selection__label form-selection__label--basic-information">
                     <span class="form-selection__text">Возраст (лет):</span>
                     <input class="form-selection__input" type="text" name="age" placeholder="7">
                   </label>
@@ -95,7 +97,7 @@
               </div>
               <fieldset class="form-selection__group form-selection__group--contacts">
                 <legend class="form-selection__group-title title">Контактные данные (владельца кота)</legend>
-                <label class="form-selection__label">
+                <label class="form-selection__label form-selection__label">
                   <span class="form-selection__text">e-mail:*</span>
                   <input class="form-selection__input form-selection__input--mail" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 </label>
@@ -106,14 +108,14 @@
               </fieldset>
 
               <fieldset class="form-selection__group">
-                <legend class="form-selection__group-title title">Комментарий</legend>
+                <legend class="form-selection__group-title title form-selection__group-title--comment">Комментарий</legend>
                 <label class="form-selection__label">
                   <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
                 </label>
               </fieldset>
 
               <fieldset class="form-selection__group">
-                <legend class="form-selection__group-title title">Дополнительно</legend>
+                <legend class="form-selection__group-title title form-selection__group-title--add">Дополнительно</legend>
                 <ul class="form-selection__list form-selection__list--checkbox">
                   <li class="form-selection__checkbox">
                     <label class="form-selection__label">
@@ -146,15 +148,15 @@
                 </ul>
               </fieldset>
               <button class="form-selection__button button" type="submit">Отправить заявку</button>
-              <span class="form-selection__the-note description">* — Обязательные поля</span>
+              <span class="description form-selection__the-note">* — Обязательные поля</span>
           </form>
         </section>
       </div>
       <section class="contacts">
-        <div class="wrapper contacts--wrapper">
+        <div class="wrapper contacts--wrapper wrapper--form">
           <h2 class="visually-hidden">Контакты: адрес</h2>
           <p class="contacts__partnership-title title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></address>
         </div>
       </section>
 
@@ -197,6 +199,6 @@
         </a>
       </div>
     </footer>
-
+    <script src="js/script.js"></script>
   </body>
 </html>
