@@ -41,6 +41,14 @@
     max-width: 630px;
     margin-bottom: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    min-width: 569px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .form-selection__label textarea {
@@ -128,6 +136,10 @@
     width: 282px;
     padding: 16px 45px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
 }
 
 .form-selection__list {
@@ -173,6 +185,11 @@
     margin-bottom: 40px;
   }
 
+  @media (min-width: @desktop-width) {
+    margin-top: 69px;
+    margin-bottom: 41px;
+  }
+
   & .form-selection__group-title {
     margin-bottom: 35px;
 
@@ -192,6 +209,12 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+  }
+
+  & .form-selection__label:last-child {
+    @media (min-width: @desktop-width) {
+      margin-bottom: auto;
+    }
   }
 }
 
@@ -216,6 +239,10 @@
     @media (min-width: @tablet-width) {
       padding-bottom: 52px;
     }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+    }
   }
 
   & .form-selection__group:last-child {
@@ -225,6 +252,10 @@
     @media (min-width: @tablet-width) {
       padding-top: 25px;
       padding-bottom: 12px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 0;
     }
   }
 }
@@ -236,6 +267,10 @@
 
   & .form-selection__label {
     margin-bottom: 13px;
+  }
+
+  & .form-selection__list {
+    margin: 0;
   }
 }
 
@@ -280,10 +315,22 @@
     padding-top: 40px;
     margin-bottom: 57px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
+  }
 }
 
 .wrapper--form {
   @media (min-width: @tablet-width) {
     width: 630px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
+.form-selection__label--textarea {
+  max-width: 100%;
 }
