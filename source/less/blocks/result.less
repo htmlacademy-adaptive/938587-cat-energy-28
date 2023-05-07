@@ -3,8 +3,12 @@
   margin-top: 49px;
 
   @media (min-width: @tablet-width) {
-    background-color: @basic-white;
+    background: linear-gradient(to bottom, @basic-white 60%, #eaeaea 40%);
     margin-top: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(to top, #eaeaea 70%, @basic-white 30%);
   }
 }
 
@@ -32,6 +36,12 @@
     width: 433px;
     margin-bottom: 69px;
   }
+}
+
+.result__number {
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
 }
 
 .result__numbers {
@@ -114,11 +124,14 @@
 }
 
 .result__number-description {
+  display: inline-block;
+  background-color: #eaeaea;
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
+  width: 56px;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
