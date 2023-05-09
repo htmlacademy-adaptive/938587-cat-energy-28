@@ -1,6 +1,16 @@
 .program-type {
   margin-top: 20px;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 82px;
+    margin-bottom: 71px;
+  }
 }
 
 .program-type__list {
@@ -23,9 +33,30 @@
 
 .program-type__item {
   background-color: #f2f2f2;
+  padding-bottom: 18px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 240px;
+    border: 1px solid #d9d9d9;
+    bottom: 57px;
+    left: 21px;
+
+    @media (min-width: @tablet-width) {
+      border: 0;
+    }
+  }
+
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 53px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 570px;
+    padding-bottom: 55px;
   }
 }
 
@@ -33,10 +64,91 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 29px;
+  padding-left: 92px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin: 77px 53px 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @basic-green;
+    left: 22px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &--slim {
+    &::after {
+      background: url("../img/cat-slim.svg") no-repeat center center;
+      width: 35px;
+      height: 50px;
+      left: 29px;
+      top: -3px;
+    }
+  }
+
+  &--pro {
+    &::after {
+      background: url("../img/cat-pro.svg") no-repeat center center;
+      width: 67px;
+      height: 28px;
+      left: 11px;
+      top: 6px;
+    }
+  }
+}
+
+.program-type__description {
+  margin-left: 20px;
+  max-width: 227px;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+    margin-left: 52px;
+    max-width: 340px;
+    color: @basic-black;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 457px;
+    margin-bottom: 23px;
+  }
 }
 
 .program-type__button {
   background-color: transparent;
   color: @basic-black;
   line-height: 16px;
+  margin-left: 19px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("../img/icon-arrow.svg") no-repeat;
+    width: 24px;
+    height: 12px;
+    right: -40px;
+    top: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 53px;
+  }
 }

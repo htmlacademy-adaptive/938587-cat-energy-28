@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
 
-    <header class="main-header">
+    <header class="main-header main-nav--nojs">
       <div class="wrapper main-header--wrapper">
         <a class="main-header__logo" href="index.html">
           <img
@@ -18,27 +18,29 @@
             alt="Логотип Кэт энерджи"
           />
           <img
+            class="main-header__logo--mod-nojs"
             src="img/logo-title-mobile.svg"
             width="101"
             height="18"
             alt="CAT ENERGY"
           />
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+        <nav class="main-nav main-nav--closed">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item main-nav__item--current">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        <button class="main-nav__toggle" type="button">
+        </button>
         </nav>
       </div>
     </header>
@@ -205,6 +207,7 @@
           </li>
 
           <li class="catalog__item catalog__item---more">
+            <img class="catalog__plus" src="img/catalog-plus.svg" alt="+">
             <h3 class="catalog__name title catalog__item-title--mode">Показать еще 100500 товаров</h3>
             <p class="catalog__item-description description">На самом деле вкусов гораздо больше!</p>
             <button class="catalog__button button button--more">Показать все</button>
@@ -254,6 +257,7 @@
             </ul>
           </div>
           <div class="catalog-extra__present--wrapper">
+            <img src="img/icon-gift.svg" alt="Подарок">
             <p class="catalog-extra__present-title">Закажите все и получите чехол для кота в подарок!</p>
           </div>
         </div>
@@ -263,21 +267,13 @@
         <div class="wrapper contacts--wrapper">
           <h2 class="visually-hidden">Контакты: адрес</h2>
           <p class="contacts__partnership-title title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></address>
         </div>
       </section>
 
       <section class="map">
-        <div class="wrapper">
-          <h2 class="visually-hidden">Карта</h2>
-            <img
-              class="map__img"
-              width="320"
-              height="362"
-              src="img/map-mobile.png"
-              alt="Карта с адресом"
-            />
-          </div>
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.8109828425345!2d30.31350786597949!3d59.9679457036377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1682189444111!5m2!1sru!2sru" width="100%" height="100%" style="border: 0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
 
@@ -314,6 +310,6 @@
         </a>
       </div>
     </footer>
-
+    <script src="js/script.js"></script>
   </body>
 </html>
