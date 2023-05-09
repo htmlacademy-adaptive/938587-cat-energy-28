@@ -39,12 +39,14 @@
 }
 
 .result__number {
+  position: relative;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   text-align: center;
 }
 
 .result__numbers {
+  margin-top: 20px;
   margin-bottom: 20px;
 
   @media (min-width: @mobile-width) {
@@ -70,6 +72,7 @@
 }
 
 .result__total {
+  margin-top: 20px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -114,6 +117,8 @@
   line-height: 24px;
   text-transform: uppercase;
   color: @basic-black;
+  margin-top: 14px;
+  margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -125,13 +130,17 @@
 
 .result__number-description {
   display: inline-block;
+  position: absolute;
   background-color: #eaeaea;
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
-  width: 56px;
+  width: 87px;
+  left: 16px;
+  bottom: -17px;
+  word-spacing: 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
@@ -147,6 +156,7 @@
 }
 
 .result__slider {
+  padding-top: 20px;
   padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
