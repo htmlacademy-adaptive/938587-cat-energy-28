@@ -211,3 +211,37 @@
   text-align: center;
   margin-top: 25px;
 }
+
+.catalog-extra__title--line {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 40px;
+    z-index: -2;
+    right: 0;
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
+
+    @media (min-width: @tablet-width) {
+      top: -50px;
+      right: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 440px;
+    height: 60px;
+    background-color: @basic-white;
+    top: -15px;
+    left: -190px;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      width: 559px;
+    }
+  }
+}

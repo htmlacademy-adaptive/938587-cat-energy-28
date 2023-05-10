@@ -1,9 +1,23 @@
 .catalog-extra__title {
+  position: relative;
   font-size: 24px;
   line-height: 24px;
   padding: 25px 0 36px 0;
   border-top: 1px solid #ebebeb;
   text-align: left;
+
+  /* Зачем такую сложность давать на курсе
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 112%;
+    width: 100vw;
+    height: 2px;
+    background-color: @basic-green;
+    transform: translateY(40%);
+  }
+  */
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -114,12 +128,23 @@
 }
 
 .catalog-extra__present--wrapper {
+  position: relative;
   background-image: url("../img/present.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   margin-top: 35px;
-  max-height: 290px;
+  min-height: 290px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/icon-gift.svg");
+    top: 59px;
+    left: 101px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 245px;
@@ -134,11 +159,11 @@
   font-size: 16px;
   line-height: 20px;
   color: @basic-white;
-  padding-top: 32px;
-  padding-bottom: 43px;
+
   margin-left: 56px;
   width: 161px;
   text-align: center;
+  padding-top: 187px;
 
   @media (min-width: @tablet-width) {
     padding-top: 71px;
@@ -167,9 +192,4 @@
     margin-top: 76px;
     margin-bottom: 86px;
   }
-}
-
-.catalog-extra__present-gift {
-  margin-left: 101px;
-  margin-top: 59px;
 }
