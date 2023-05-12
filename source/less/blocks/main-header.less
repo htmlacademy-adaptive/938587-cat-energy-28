@@ -1,9 +1,18 @@
 .main-header {
+  position: relative;
   padding-top: 10px;
   padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
   }
 }
 
@@ -15,6 +24,10 @@
   @media (min-width: @tablet-width) {
     align-items: flex-start;
     max-height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-height: 100%;
   }
 }
 

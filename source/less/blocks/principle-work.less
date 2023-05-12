@@ -2,38 +2,38 @@
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 72px;
   }
 }
 
 .principle-work__list {
   .zeroing-the-list();
-  counter-reset: number 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 37px 153px;
+    gap: 77px 40px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 37px 94px;
+    gap: 37px 84px;
   }
 }
 
 .principle-work__item {
   position: relative;
-  counter-increment: number 1;
   min-height: 60px;
   margin: 0;
   padding-left: 80px;
-
   font-size: 14px;
   line-height: 18px;
-  content: counter(number);
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
 
   &::before {
     position: absolute;
@@ -42,6 +42,11 @@
     height: 60px;
     background-color: @basic-green;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &::after {
@@ -53,6 +58,11 @@
     right: 0;
     bottom: 0;
     margin: auto 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--icon-leaf {
@@ -60,6 +70,11 @@
       background: url("../img/principle-work/icon-leaf.svg") no-repeat center center;
       width: 38px;
       height: 40px;
+
+      @media (min-width: @tablet-width) {
+        left: 20px;
+        top: -100px;
+      }
     }
   }
 
@@ -68,6 +83,11 @@
       background: url("../img/principle-work/icon-powder.svg") no-repeat center center;
       width: 33px;
       height: 36px;
+
+      @media (min-width: @tablet-width) {
+        left: 23px;
+        top: -100px;
+      }
     }
   }
 
@@ -76,6 +96,11 @@
       background: url("../img/principle-work/icon-eat.svg") no-repeat center center;
       width: 31px;
       height: 38px;
+
+      @media (min-width: @tablet-width) {
+        left: 23px;
+        top: -100px;
+      }
     }
   }
 
@@ -84,28 +109,73 @@
       background: url("../img/principle-work/icon-time.svg") no-repeat center center;
       width: 33px;
       height: 38px;
-    }
-  }
 
-  &--number {
-    &::after {
       @media (min-width: @tablet-width) {
-        content: counter(number);
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -10;
-        font-size: 280px;
-        line-height: 280px;
+        left: 23px;
+        top: -100px;
       }
     }
   }
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: @tablet-width) {
     margin-bottom: auto;
   }
+
+  & .description {
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      padding-top: 111px;
+      max-width: 245px;
+    }
+  }
 }
+
+.principle-work__number {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    top: -40px;
+    right: 110px;
+    font-family: "Oswald", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    text-align: center;
+    color: #f2f2f2;
+    z-index: -2;
+
+    &--second {
+      right: 90px;
+    }
+
+    &--third {
+      right: 87px;
+    }
+
+    &--fourth {
+      right: 86px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 20px;
+
+    &--second {
+      right: -10px;
+    }
+
+    &--third {
+      right: -5px;
+    }
+
+    &--fourth {
+      right: -10px;
+    }
+  }
+}
+
