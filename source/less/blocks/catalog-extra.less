@@ -6,23 +6,11 @@
   border-top: 1px solid #ebebeb;
   text-align: left;
 
-  /* Зачем такую сложность давать на курсе
-  &::after {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 112%;
-    width: 100vw;
-    height: 2px;
-    background-color: @basic-green;
-    transform: translateY(40%);
-  }
-  */
-
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     padding: 68px 36px 80px;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -123,7 +111,7 @@
   @media (min-width: @desktop-width) {
     flex-wrap: nowrap;
     justify-content: left;
-    padding: 15px 0 17px;
+    padding: 18px 0 19px;
   }
 }
 
@@ -134,7 +122,7 @@
   background-size: cover;
   width: 100%;
   margin-top: 35px;
-  min-height: 290px;
+  height: 290px;
 
   &::after {
     position: absolute;
@@ -144,9 +132,19 @@
     background-image: url("../img/icon-gift.svg");
     top: 59px;
     left: 101px;
+
+    @media (min-width: @tablet-width) {
+      left: 77px;
+      top: 57px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
+    height: 289px;
     width: 245px;
     margin-top: auto;
   }
