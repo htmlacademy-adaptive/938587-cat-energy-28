@@ -124,6 +124,10 @@
   margin-top: 35px;
   height: 290px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/present@2x.jpg");
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -141,12 +145,22 @@
 
   @media (min-width: @tablet-width) {
     height: 200px;
+    background-image: url("../img/present-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/present-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     height: 289px;
     width: 245px;
     margin-top: auto;
+    background-image: url("../img/present-desk.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/present-desk@2x.jpg");
+    }
   }
 }
 

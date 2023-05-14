@@ -11,12 +11,11 @@
     <header class="main-header main-nav--nojs">
       <div class="wrapper main-header--wrapper">
         <a class="main-header__logo" href="index.html">
-          <img
-            src="img/logo-mobile.svg"
-            width="33"
-            height="38"
-            alt="Логотип Кэт энерджи"
-          />
+          <picture>
+            <source media="(min-width:1440px)" srcset="img/logo-desktop.svg" width="202" height="59">
+            <source media="(min-width:768px)" srcset="img/logo-tablet.svg" width="174" height="52">
+            <img src="img/logo-mobile.svg" width="33" height="38" alt="Логотип Кэт энерджи"/>
+          </picture>
           <img
             class="main-header__logo--mod-nojs"
             src="img/logo-title-mobile.svg"
@@ -170,8 +169,8 @@
         <a class="main-footer__logo">
           <img
             src="img/logo-title-mobile.svg"
-            width="101"
-            height="18"
+            width="128"
+            height="24"
             alt="CAT ENERGY"
           />
         </a>
