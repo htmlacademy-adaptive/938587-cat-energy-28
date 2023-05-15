@@ -1,14 +1,16 @@
 .catalog-extra__title {
+  position: relative;
   font-size: 24px;
   line-height: 24px;
-  padding: 25px 0 36px 20px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #cdcdcd;
+  padding: 25px 0 36px 0;
+  border-top: 1px solid #ebebeb;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     padding: 68px 36px 80px;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,6 +81,11 @@
 .catalog-extra__item {
   padding-top: 13px;
   padding-bottom: 19px;
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
 
   & .catalog__name {
     width: auto;
@@ -104,20 +111,56 @@
   @media (min-width: @desktop-width) {
     flex-wrap: nowrap;
     justify-content: left;
-    padding: 15px 0 17px;
+    padding: 18px 0 19px;
   }
 }
 
 .catalog-extra__present--wrapper {
+  position: relative;
   background-image: url("../img/present.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  margin-top: 35px;
+  height: 290px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/present@2x.jpg");
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/icon-gift.svg");
+    top: 59px;
+    left: 101px;
+
+    @media (min-width: @tablet-width) {
+      left: 77px;
+      top: 57px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 200px;
+    background-image: url("../img/present-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/present-tablet@2x.jpg");
+    }
+  }
 
   @media (min-width: @desktop-width) {
-    width: 245px;
     height: 289px;
+    width: 245px;
     margin-top: auto;
+    background-image: url("../img/present-desk.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/present-desk@2x.jpg");
+    }
   }
 }
 
@@ -128,11 +171,11 @@
   font-size: 16px;
   line-height: 20px;
   color: @basic-white;
-  padding-top: 187px;
-  padding-bottom: 43px;
+
   margin-left: 56px;
   width: 161px;
   text-align: center;
+  padding-top: 187px;
 
   @media (min-width: @tablet-width) {
     padding-top: 71px;

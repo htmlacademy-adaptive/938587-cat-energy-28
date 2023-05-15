@@ -1,10 +1,16 @@
 .select-program {
   position: relative;
   padding: 27px 20px 0;
-  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 302px, @basic-white 40%), url("../img/select-background.jpg");
+  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 302px, @basic-white 40%), url("../img/index-background-desktop2.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center top;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 302px, @basic-white 40%), url("../img/index-background-desktop2@2x.jpg");
+    background-position: top;
+    background-size: cover;
+  }
 
   @media (min-width: @tablet-width) {
     background: none;
@@ -12,12 +18,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(to right, @basic-white 50%, rgba(104, 183, 56, 0.85) 50%), url("../img/select-background.jpg");
+    background: linear-gradient(to right, @basic-white 0, rgba(104, 183, 56, 0.85) 0), url("../img/index-background-desktop1.jpg");
     background-repeat: no-repeat;
     background-position: right;
-    min-height: 520px;
-    padding: 0;
-    margin-top: 62px;
+    background-size: 50% auto;
+    padding-top: 62px;
+    padding-bottom: 204px;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(to right, @basic-white 0, rgba(104, 183, 56, 0.85) 0), url("../img/index-background-desktop1@2x.jpg");
+    }
   }
 }
 
@@ -42,7 +52,7 @@
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     margin-left: 80px;
-    padding-top: 110px;
+    padding-top: 147px;
   }
 }
 
@@ -69,15 +79,11 @@
 }
 
 .select-program-wrapper img {
-  @media (min-width: @tablet-width) {
-    height: 500px;
-  }
-
   @media (min-width: @desktop-width) {
     grid-column: 3 / 4;
     grid-row: 1 / -2;
-    margin-top: 30px;
-    margin-left: -130px;
+    margin-top: 77px;
+    margin-left: -160px;
   }
 }
 
@@ -102,7 +108,7 @@
     grid-column: 1 / 3;
     grid-row: 2 / 2;
     margin-left: 80px;
-    padding-top: 160px;
+    padding-top: 190px;
   }
 }
 
@@ -119,14 +125,14 @@
     line-height: 20px;
     box-sizing: content-box;
     margin-left: 88px;
-    margin-top: -481px;
-    margin-bottom: 433px;
+    margin-top: -581px;
+    margin-bottom: 533px;
     order: 2;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
-    margin: 210px 0 0 80px;
+    margin: 240px 0 0 80px;
   }
 }
