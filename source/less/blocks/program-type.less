@@ -132,9 +132,10 @@
   position: relative;
 
   &::before {
+    mask-image: url("../img/sprite.svg#icon-arrow");
+    background-color: @basic-black;
     position: absolute;
     content: "";
-    background: url("../img/icon-arrow.svg") no-repeat;
     width: 24px;
     height: 12px;
     right: -40px;

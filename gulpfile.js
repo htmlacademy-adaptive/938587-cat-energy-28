@@ -28,7 +28,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
-    browser: 'Chrome'
+    browser: 'Firefox'
   });
   done();
 }
