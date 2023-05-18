@@ -204,6 +204,14 @@
   color: @dark-gray;
   padding: 10px 94px;
 
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     padding: 10px 79px;
     margin-top: 15px;
@@ -233,13 +241,16 @@
 }
 
 .catalog__plus {
+  background-image: url("../img/sprite.svg#plus");
   height: 30px;
   text-align: center;
   margin-top: 25px;
 
   @media (min-width: @tablet-width) {
     height: 60px;
+    width: 60px;
     position: absolute;
+    content: "";
     top: 142px;
     left: 132px;
     margin-top: 0;

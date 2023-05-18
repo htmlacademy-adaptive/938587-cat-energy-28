@@ -46,6 +46,10 @@
   max-width: 100%;
   margin-bottom: 14px;
 
+  &--disabled {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     max-width: 630px;
     margin-bottom: 20px;
@@ -366,21 +370,48 @@
 
 
 .form-selection__input--tel {
+  mask-image: url("../img/sprite.svg#phone");
+  background-color: #222222;
   position: absolute;
   content: "";
   width: 20px;
   height: 20px;
-  right: 20px;
+  right: 15px;
   top: 13px;
+
+  @media (min-width: @tablet-width) {
+    right: 20px;
+    top: 18px;
+  }
+
+  &:active {
+    background-color: @basic-green;
+  }
 }
 
 .form-selection__input--mail {
+  mask-image: url("../img/sprite.svg#mail");
+  background-color: #222222;
   position: absolute;
   content: "";
   width: 20px;
   height: 20px;
-  right: 20px;
-  top: 13px;
+  right: 16px;
+  top: 16px;
+
+  @media (min-width: @tablet-width) {
+    right: 20px;
+    top: 20px;
+  }
+
+  &:focus {
+    background-color: @basic-green;
+  }
+}
+
+.form-selection__input--error {
+  border: 1px solid #ff8282;
+  outline: none;
 }
 
 .form-selection__mark {
@@ -388,6 +419,10 @@
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
+
+  &:hover {
+    border-color: #bababa;
+  }
 }
 
 
