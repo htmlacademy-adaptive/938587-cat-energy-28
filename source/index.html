@@ -129,13 +129,17 @@
           </div>
           <div class="result__slider">
             <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-slider-tablet.webp 1x, img/cat-slider-tablet@2x.webp 2x" width="560" height="512">
-              <source type="image/webp" srcset="img/cat-after-before-mobile.webp 1x, img/cat-after-before-mobile@2x.webp 2x" width="280" height="256">
               <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png 1x, img/cat-slider-tablet@2x.png 2x"
                 width="560" height="512">
                 <img class="result__slider-before-cat" src="img/cat-after-before-mobile.png" srcset="img/cat-after-before-mobile@2x.png"
                 alt="cat-before" width="280" height="256">
             </picture>
+            <div class="result__slider-line result__slider-bar">
+              <svg class="result__slider-arrows" width="24" height="18">
+                <use href="img/sprite.svg#slider-arrows"></use>
+              </svg>
+            </div>
+          </div>
           </div>
         </div>
       </section>

@@ -165,8 +165,8 @@
 }
 
 .form-selection__list--checkbox {
-  @media (min-width: @tablet-width) {
-    max-width: 533px;
+  @media (min-width: @desktop-width) {
+    max-width: 660px;
   }
 
   & .form-selection__label {
@@ -285,6 +285,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
+    margin-left: 80px;
     max-width: 568px;
   }
 
@@ -294,9 +295,10 @@
 
   & .form-selection__list {
     margin: 0;
+    max-width: 540px;
 
     @media (min-width: @tablet-width) {
-      margin-left: 28px;
+      padding-left: 28px;
     }
   }
 }
@@ -325,6 +327,10 @@
 .form-selection__radio {
   &:not(:last-child) {
     margin-bottom: 13px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -383,10 +389,6 @@
     right: 20px;
     top: 18px;
   }
-
-  &:active {
-    background-color: @basic-green;
-  }
 }
 
 .form-selection__input--mail {
@@ -403,15 +405,21 @@
     right: 20px;
     top: 20px;
   }
+}
 
-  &:focus {
-    background-color: @basic-green;
-  }
+.form-selection__input:focus + .form-selection__input--mail,
+.form-selection__input:focus + .form-selection__input--tel {
+  background-color: @basic-green;
 }
 
 .form-selection__input--error {
   border: 1px solid #ff8282;
   outline: none;
+}
+
+.form-selection__input--error + .form-selection__input--mail,
+.form-selection__input--error + .form-selection__input--tel {
+  background-color: #ff8282;
 }
 
 .form-selection__mark {
@@ -448,6 +456,8 @@
   position: absolute;
   width: 26px;
   height: 26px;
+  left: 2px;
+  top: 2px;
 }
 
 .form-selection__radio-mark {
