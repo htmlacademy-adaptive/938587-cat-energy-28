@@ -33,6 +33,10 @@
     opacity: 0.3;
   }
 
+  &:focus {
+    outline: 2px solid @basic-black;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -100,6 +104,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:focus {
+    background-color: @basic-black;
   }
 
   &--vkontakte {
