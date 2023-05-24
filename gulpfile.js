@@ -10,6 +10,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import svgo from 'gulp-svgmin';
+import { stacksvg } from "gulp-stacksvg"
 import {deleteAsync as del} from 'del';
 
 // Styles
@@ -69,10 +70,17 @@ const createWebp = () => {
 
 //SVG
 
-const svg = () => {
-  return gulp.src(['source/img/*.svg'])
-    .pipe(svgo())
-    .pipe(gulp.dest('build/img'));
+const svg = () =>
+gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+.pipe(svgo())
+.pipe(gulp.dest('build/img'));
+
+const sprite = () => {
+return gulp.src('source/img/icons/*.svg')
+.pipe(svgo())
+.pipe(stacksvg({ output: `sprite` }))
+.pipe(rename('sprite.svg'))
+.pipe(gulp.dest('build/img'));
 }
 
 // Copy
@@ -136,6 +144,7 @@ export const build = gulp.series(
   html,
   scripts,
   svg,
+  sprite,
   createWebp
   ),
   );
@@ -151,6 +160,7 @@ export default gulp.series(
   html,
   scripts,
   svg,
+  sprite,
   createWebp
   ),
   gulp.series(
