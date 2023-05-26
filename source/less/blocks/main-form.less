@@ -117,14 +117,14 @@
 }
 
 .form-selection__label--basic-information {
-  & .form-selection__text {
-    margin-right: 13px;
-    align-items: center;
-  }
-
   & :last-child {
     min-width: 94px;
   }
+}
+
+.form-selection__label--basic-information .form-selection__text {
+  margin-right: 13px;
+  align-items: center;
 }
 
 .form-selection__input {
@@ -169,15 +169,6 @@
     max-width: 660px;
   }
 
-  & .form-selection__label {
-    margin-bottom: 13px;
-
-    @media (min-width: @tablet-width) {
-      margin-bottom: 32px;
-      max-width: 533px;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -185,6 +176,15 @@
 
   @media (min-width: @desktop-width) {
     flex-wrap: nowrap;
+  }
+}
+
+.form-selection__list--checkbox .form-selection__label {
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+    max-width: 533px;
   }
 }
 
@@ -208,33 +208,33 @@
     margin-bottom: 41px;
   }
 
-  & .form-selection__group-title {
-    margin-bottom: 35px;
-    max-width: 187px;
-
-    @media (min-width: @tablet-width) {
-      margin-bottom: 76px;
-      max-width: 100%;
-    }
-  }
-
-  & .form-selection__text {
-    margin-right: 10px;
-
-    @media (min-width: @tablet-width) {
-      margin-right: 20px;
-    }
-  }
-
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
   }
+}
 
-  & .form-selection__label:last-child {
-    @media (min-width: @desktop-width) {
-      margin-bottom: auto;
-    }
+.form-selection__group--contacts .form-selection__group-title {
+  margin-bottom: 35px;
+  max-width: 187px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+    max-width: 100%;
+  }
+}
+
+.form-selection__group--contacts .form-selection__text {
+  margin-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.form-selection__group--contacts .form-selection__label:last-child {
+  @media (min-width: @desktop-width) {
+    margin-bottom: auto;
   }
 }
 
@@ -246,32 +246,32 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
   }
+}
 
-  & .form-selection__group:first-child {
-    padding-top: 0;
-    padding-bottom: 10px;
+.form-group--wrapper .form-selection__group:first-child {
+  padding-top: 0;
+  padding-bottom: 10px;
 
-    @media (min-width: @tablet-width) {
-      padding-bottom: 52px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 0;
-    }
+  @media (min-width: @tablet-width) {
+    padding-bottom: 52px;
   }
 
-  & .form-selection__group:last-child {
-    padding-top: 22px;
-    padding-bottom: 5px;
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      padding-top: 25px;
-      padding-bottom: 12px;
-    }
+.form-group--wrapper .form-selection__group:last-child {
+  padding-top: 22px;
+  padding-bottom: 5px;
 
-    @media (min-width: @desktop-width) {
-      padding-bottom: 0;
-    }
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -288,18 +288,18 @@
     margin-left: 80px;
     max-width: 568px;
   }
+}
 
-  & .form-selection__label {
-    margin-bottom: 13px;
-  }
+.form-selection__group--other .form-selection__label {
+  margin-bottom: 13px;
+}
 
-  & .form-selection__list {
-    margin: 0;
-    max-width: 540px;
+.form-selection__group--other .form-selection__list {
+  margin: 0;
+  max-width: 540px;
 
-    @media (min-width: @tablet-width) {
-      padding-left: 28px;
-    }
+  @media (min-width: @tablet-width) {
+    padding-left: 28px;
   }
 }
 
@@ -508,16 +508,20 @@
       left: -39px;
     }
   }
+}
 
-  &-comment::before {
+.form-selection__group-title--line-comment {
+  &::before {
     width: 385px;
 
     @media (min-width: @tablet-width) {
       width: 258px;
     }
   }
+}
 
-  &-add::before {
+.form-selection__group-title--line-add {
+  &::before {
     width: 400px;
 
     @media (min-width: @tablet-width) {
@@ -529,7 +533,7 @@
     }
   }
 
-  &-add::after {
+  &::after {
     @media (min-width: @tablet-width) {
       top: 55px;
     }
