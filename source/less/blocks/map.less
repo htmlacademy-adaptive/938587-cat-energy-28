@@ -12,7 +12,9 @@
 
 .map {
   position: relative;
+}
 
+.map--open {
   &::after {
     position: absolute;
     content: "";
@@ -37,4 +39,22 @@
 
 .map-g {
   width: 100%;
+}
+
+.map-g--nojs {
+  background-image: url("../img/location.png");
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/location-tablet.png");
+    width: 707px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/location-desk.png");
+    width: 1220px;
+  }
 }

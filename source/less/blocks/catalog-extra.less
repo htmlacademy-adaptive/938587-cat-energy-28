@@ -105,10 +105,19 @@
   }
 }
 
-.catalog-extra__item .catalog__name {
+.catalog-extra__item-title {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #222222;
   width: auto;
 
   @media (min-width: @tablet-width) {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    width: 135px;
+    text-align: center;
     margin: 0;
   }
 
@@ -116,10 +125,11 @@
     align-self: center;
     text-align: left;
     width: 325px;
+    margin: 0 auto;
   }
 }
 
-.catalog-extra__present--wrapper {
+.catalog-extra__present {
   position: relative;
   background-image: url("../img/present.jpg");
   background-repeat: no-repeat;
@@ -196,13 +206,13 @@
   }
 }
 
-.catalog-extra_main-part {
+.catalog-extra__main-part {
   @media (min-width: @desktop-width) {
     width: 70%;
   }
 }
 
-.catalog-extra--wrapper {
+.wrapper--catalog-extra {
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;

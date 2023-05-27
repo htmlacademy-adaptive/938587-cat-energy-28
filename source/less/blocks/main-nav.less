@@ -136,13 +136,17 @@
 }
 
 
-.page__body_index .main-nav__item--current {
+.main-nav__item--current-white {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @basic-green;
+  }
+
   @media (min-width: @desktop-width) {
     border-bottom: 2px solid @basic-white;
   }
 }
 
-.page__body_index .main-nav__item-link {
+.main-nav__item-link--white a {
   @media (min-width: @desktop-width) {
     color: @basic-white;
   }
