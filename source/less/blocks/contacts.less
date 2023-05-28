@@ -20,6 +20,10 @@
     margin-top: -5px;
     width: 160px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -20px;
+  }
 }
 
 .map__contacts-adress-city {
@@ -27,6 +31,10 @@
     display: block;
     padding-top: 20px;
     padding-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
   }
 }
 
@@ -43,7 +51,7 @@
 .map__contacts {
   display: flex;
   justify-content: space-between;
-  padding: 26px 20px;
+  padding: 20px 20px 25px 20px;
 
   @media (min-width: @tablet-width) {
     padding: 60px 45px 55px 45px;
@@ -53,15 +61,15 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     padding: 56px 60px 56px 80px;
-    width: 425px;
+    width: 410px;
     background-color: @basic-white;
     left: calc((100% - 1220px) / 2);
-    top: 135px;
+    top: 100px;
   }
 }
 
 .main-catalog .map {
-  margin-top: 35px;
+  margin-top: 42px;
   background-color: #f2f2f2;
 
   @media (min-width: @tablet-width) {
@@ -74,7 +82,7 @@
 }
 
 .main-form .map {
-  margin-top: 35px;
+  margin-top: 37px;
   background-color: #f2f2f2;
 
   @media (min-width: @tablet-width) {
