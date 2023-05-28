@@ -13,13 +13,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 77px 40px;
+    gap: 110px 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 37px 84px;
+    gap: 40px 84px;
   }
 }
 
@@ -100,7 +100,11 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 58px;
+    margin-bottom: 20px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 55px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -123,7 +127,7 @@
     display: block;
     position: absolute;
     top: -40px;
-    right: 110px;
+    right: 100px;
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 280px;
     line-height: 280px;
@@ -132,15 +136,15 @@
     z-index: -2;
 
     &--second {
-      right: 90px;
+      right: 80px;
     }
 
     &--third {
-      right: 87px;
+      right: 80px;
     }
 
     &--fourth {
-      right: 86px;
+      right: 80px;
     }
   }
 
