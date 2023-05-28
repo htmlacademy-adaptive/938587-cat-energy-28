@@ -19,7 +19,7 @@
 
 .main-form .title--main {
   padding-top: 27px;
-  margin-bottom: 37px;
+  margin-bottom: 33px;
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
@@ -44,7 +44,7 @@
   position: relative;
   display: flex;
   max-width: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   &--disabled {
     opacity: 0.3;
@@ -52,7 +52,7 @@
 
   @media (min-width: @tablet-width) {
     max-width: 630px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,7 +68,7 @@
   resize: none;
   width: 100%;
   height: 130px;
-  padding: 9px 12px 9px 15px;
+  padding: 10px 12px 9px 15px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -128,7 +128,7 @@
 }
 
 .form-selection__input {
-  padding: 14px 40px 13px 15px;
+  padding: 14px 40px 13px 20px;
   flex: 1;
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
@@ -145,7 +145,7 @@
 
 .form-selection__button {
   width: 100%;
-  margin-top: 12px;
+  margin-top: 5px;
   margin-bottom: 21px;
   padding: 10px 44px;
   cursor: pointer;
@@ -153,10 +153,12 @@
   @media (min-width: @tablet-width) {
     width: 282px;
     padding: 16px 45px;
+    font-size: 20px;
   }
 
   @media (min-width: @desktop-width) {
     width: 568px;
+    margin-top: 15px;
   }
 }
 
@@ -196,16 +198,11 @@
 
 .form-selection__group--contacts {
   padding: 0;
-  margin: 26px 0 10px 0;
+  margin: 20px 0 10px 0;
 
   @media (min-width: @tablet-width) {
-    margin-top: 75px;
-    margin-bottom: 40px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 69px;
-    margin-bottom: 41px;
+    margin-top: 72px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
@@ -262,8 +259,7 @@
 }
 
 .form-selection__wrapper .form-selection__group:last-child {
-  padding-top: 22px;
-  padding-bottom: 5px;
+  padding-top: 18px;
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;
@@ -322,15 +318,15 @@
   width: auto;
   margin-left: 64px;
   margin-bottom: 32px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
 }
 
 .form-selection__radio {
   &:not(:last-child) {
     margin-bottom: 13px;
-
-    @media (min-width: @desktop-width) {
-      margin-bottom: 25px;
-    }
   }
 }
 
@@ -344,15 +340,16 @@
 }
 
 .form-selection__group-title--add {
-  margin-bottom: 34px;
+  padding-top: 5px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 30px;
-    margin-bottom: 57px;
+    padding-top: 42px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 57px;
+    padding-top: 60px;
   }
 }
 
@@ -368,6 +365,7 @@
 
 .form-selection__label--textarea {
   max-width: 100%;
+  margin-top: -10px;
 }
 
 .form-selection__text-mod {
@@ -386,7 +384,7 @@
   top: 13px;
 
   @media (min-width: @tablet-width) {
-    right: 20px;
+    right: 13px;
     top: 18px;
   }
 }
@@ -399,11 +397,11 @@
   width: 20px;
   height: 20px;
   right: 16px;
-  top: 16px;
+  top: 10px;
 
   @media (min-width: @tablet-width) {
-    right: 20px;
-    top: 20px;
+    right: 15px;
+    top: 15px;
   }
 }
 
@@ -428,6 +426,11 @@
   height: 30px;
   border: 1px solid #cdcdcd;
 
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
   &:hover {
     border-color: #bababa;
   }
@@ -447,6 +450,11 @@
   height: 13px;
   background-color: @basic-green;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form-selection__checkbox-input:checked + .form-selection__checkbox-mark::before {
@@ -458,6 +466,13 @@
   height: 26px;
   left: 2px;
   top: 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 26px;
+    height: 26px;
+    left: 5px;
+    top: 5px;
+  }
 }
 
 .form-selection__checkbox-input:focus + .form-selection__mark {
@@ -535,7 +550,7 @@
 
   &::after {
     @media (min-width: @tablet-width) {
-      top: 55px;
+      top: 65px;
     }
 
     @media (min-width: @desktop-width) {
