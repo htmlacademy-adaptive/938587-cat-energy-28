@@ -79,7 +79,7 @@
     height: 152px;
     font-size: 20px;
     line-height: 30px;
-    padding: 10px 19px;
+    padding: 12px 19px;
   }
 }
 
@@ -105,6 +105,7 @@
 
 .form-selection__text--mode2 {
   margin-left: 16px;
+  margin-top: 2px;
   color: @basic-black;
 }
 
@@ -128,7 +129,7 @@
 }
 
 .form-selection__input {
-  padding: 14px 40px 13px 20px;
+  padding: 14px 40px 13px 15px;
   flex: 1;
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
@@ -145,20 +146,20 @@
 
 .form-selection__button {
   width: 100%;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 21px;
   padding: 10px 44px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 282px;
-    padding: 16px 45px;
+    padding: 13px 45px;
     font-size: 20px;
   }
 
   @media (min-width: @desktop-width) {
     width: 568px;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }
 
@@ -170,16 +171,17 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     flex-wrap: nowrap;
-    max-width: 650px;
+    max-width: 725px;
   }
 }
 
 .form-selection__list--checkbox .form-selection__label {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 32px;
@@ -190,6 +192,10 @@
 .form-selection__checkbox {
   @media (min-width: @tablet-width) {
     width: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 45%;
   }
 }
 
@@ -215,6 +221,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
     max-width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 75px;
   }
 }
 
@@ -313,11 +323,12 @@
   line-height: 16px;
   color: @basic-black;
   width: auto;
-  margin-left: 64px;
-  margin-bottom: 32px;
+  margin-left: 60px;
+  padding-bottom: -5px;
 
   @media (min-width: @desktop-width) {
     margin-left: 80px;
+    padding-top: 10px;
   }
 }
 
@@ -341,8 +352,8 @@
   margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 42px;
-    margin-bottom: 53px;
+    padding-top: 40px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -367,6 +378,11 @@
 
 .form-selection__text-mod {
   margin-left: 15px;
+  margin-top: 1px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -3px;
+  }
 }
 
 
@@ -384,6 +400,10 @@
     right: 13px;
     top: 18px;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 15px;
+  }
 }
 
 .form-selection__mail {
@@ -399,6 +419,10 @@
   @media (min-width: @tablet-width) {
     right: 15px;
     top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 17px;
   }
 }
 
